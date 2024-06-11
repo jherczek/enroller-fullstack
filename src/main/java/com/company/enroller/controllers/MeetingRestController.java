@@ -33,7 +33,11 @@ public class MeetingRestController {
             foundParticipant = participantService.findByLogin(participantLogin);
         }
         Collection<Meeting> meetings = meetingService.findMeetings(title, description, foundParticipant, sortMode);
+<<<<<<< HEAD
         return new ResponseEntity<>(meetings, HttpStatus.OK);
+=======
+        return new ResponseEntity<Collection<Meeting>>(meetings, HttpStatus.OK);
+>>>>>>> origin/main
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
